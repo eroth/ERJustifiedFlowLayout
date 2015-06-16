@@ -7,18 +7,21 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<del>To run the example project, clone the repo, and run `pod install` from the Example directory first.</del>
+
+Cocoapods support coming soon!
 
 ## Requirements
 
 ## Installation
 
-ERJustifiedFlowLayout is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+<del>ERJustifiedFlowLayout is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "ERJustifiedFlowLayout"
-```
+```</del>
+
+Cocoapods support coming soon!
 
 ## Author
 
