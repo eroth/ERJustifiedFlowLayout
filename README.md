@@ -10,6 +10,9 @@ This is for an iOS project and can be used on any iPad or iPhone.  `ERJustifiedF
 
 `ERJustifiedFlowLayout` works with dynamic or static-sized `UICollectionViewCells`, as it only handles the layout aspect.
 
+This project contains some code from the following sources:
+[Michael Sand's answer to a question on SO](http://stackoverflow.com/a/28374247/482557) and [this Cocoanetics tutorial](http://www.cocoanetics.com/2013/08/variable-sized-items-in-uicollectionview/).  Thanks for the inspiration!
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
