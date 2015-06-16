@@ -37,7 +37,7 @@
 	// ERJustifiedFlowLayout customization point-- set horizontal justification type and cell padding here.
 	// Vertical justification is not yet supported. It is not necessary to set the sectionInset property.
 	
-	self.customJustfiedFlowLayout.horizontalJustification = FlowLayoutHorizontalJustificationFull;
+	self.customJustfiedFlowLayout.horizontalJustification = FlowLayoutHorizontalJustificationRight;
 	self.customJustfiedFlowLayout.horizontalCellPadding = 5;
 	self.customJustfiedFlowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 0, 20);
 	
