@@ -1,27 +1,18 @@
-#
-# Be sure to run `pod lib lint ERJustifiedFlowLayout.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "ERJustifiedFlowLayout"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of ERJustifiedFlowLayout."
+  s.version          = "1.0"
+  s.summary          = "A subclass of UICollectionViewFlowLayout for iOS."
   s.description      = <<-DESC
-                       An optional longer description of ERJustifiedFlowLayout
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        Supports horizontal cell justification (left, full, right) and absolute inter-cell spacing."
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ERJustifiedFlowLayout"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/eroth"
   s.license          = 'MIT'
+  s.license      = {
+	:type => 'MIT',
+	:file => 'LICENSE'
+  }
   s.author           = { "Evan Roth" => "evanroth@me.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ERJustifiedFlowLayout.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/eroth/ERJustifiedFlowLayout.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -30,8 +21,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'ERJustifiedFlowLayout' => ['Pod/Assets/*.png']
   }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

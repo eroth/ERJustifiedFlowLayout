@@ -12,24 +12,19 @@ This is for an iOS project and can be used on any iPad or iPhone.  `ERJustifiedF
 
 ## Usage
 
-<del>To run the example project, clone the repo, and run `pod install` from the Example directory first.</del>
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Cocoapods support coming soon!
 
 ## Requirements
 Tested on iOS 7 and 8 on all iPads and iPhones from 4S to 6+.
 
 ## Installation
 
-<del>ERJustifiedFlowLayout is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+ERJustifiedFlowLayout is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "ERJustifiedFlowLayout"
 ```
-
-</del>
-
-Cocoapods support coming soon!
 
 ## Instructions
 ERJustifiedFlowLayout can be used programmatically in the `viewDidLoad` method of the view controller your collection view is in:
