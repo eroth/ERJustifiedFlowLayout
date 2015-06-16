@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/ERJustifiedFlowLayout.svg?style=flat)](http://cocoapods.org/pods/ERJustifiedFlowLayout)
 
 ## About
-This is for an iOS project and can be used on any iPad or iPhone.  `ERJustifiedFlowLayout` is a subclass of Apple's UIKit UICollectionViewFlowLayout class, which is designed to be used in combination with a UICollectionView.  This project assumes you are familiar with the latter—if not, you can read about UICollectionView [here](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/CollectionViewPGforIOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012334-CH1-SW1) and you can read about UICollectionViewFlowLayout [here](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/CollectionViewPGforIOS/UsingtheFlowLayout/UsingtheFlowLayout.html#//apple_ref/doc/uid/TP40012334-CH3-SW1).
+This is for an iOS project and can be used on any iPad or iPhone.  `ERJustifiedFlowLayout` is a subclass of Apple's `UICollectionViewFlowLayout` class, which is designed to be used in combination with a `UICollectionView`.  This project assumes you are familiar with the latter—if not, you can read about `UICollectionView` [here](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/CollectionViewPGforIOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40012334-CH1-SW1) and you can read about `UICollectionViewFlowLayout` [here](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/CollectionViewPGforIOS/UsingtheFlowLayout/UsingtheFlowLayout.html#//apple_ref/doc/uid/TP40012334-CH3-SW1).
 
 `ERJustifiedFlowLayout` works with dynamic or static-sized `UICollectionViewCells`, as it only handles the layout aspect.
 
