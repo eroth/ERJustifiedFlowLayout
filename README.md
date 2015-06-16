@@ -19,7 +19,9 @@ Cocoapods support coming soon!
 
 ```ruby
 pod "ERJustifiedFlowLayout"
-```</del>
+```
+
+</del>
 
 Cocoapods support coming soon!
 
