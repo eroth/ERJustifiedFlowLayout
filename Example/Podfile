@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ERJustifiedFlowLayout_Example', :exclusive => true do
+  pod "ERJustifiedFlowLayout", :path => "../"
+end
+
+target 'ERJustifiedFlowLayout_Tests', :exclusive => true do
+  pod "ERJustifiedFlowLayout", :path => "../"
+
+  
+end

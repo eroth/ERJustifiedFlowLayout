@@ -1,0 +1,14 @@
+PODS:
+  - ERJustifiedFlowLayout (0.1.0)
+
+DEPENDENCIES:
+  - ERJustifiedFlowLayout (from `../`)
+
+EXTERNAL SOURCES:
+  ERJustifiedFlowLayout:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ERJustifiedFlowLayout: e3f13c3cf633acfc2b8ccd93f4c8c2367fb281db
+
+COCOAPODS: 0.37.2
