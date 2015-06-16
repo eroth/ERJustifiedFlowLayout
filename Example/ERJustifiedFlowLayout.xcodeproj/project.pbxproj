@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56FFB04C1B309EB200B41734 /* ERViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FFB04B1B309EB200B41734 /* ERViewController.xib */; };
+		56FFB0501B309FF000B41734 /* ERCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FFB04E1B309FF000B41734 /* ERCollectionViewCell.m */; };
+		56FFB0511B309FF000B41734 /* ERCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FFB04F1B309FF000B41734 /* ERCollectionViewCell.xib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,7 +23,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		D519AC20F79D428567F26754 /* Pods_ERJustifiedFlowLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C7D0E0D8FC13C012D59B2D /* Pods_ERJustifiedFlowLayout_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E484C4003FA63E51B9B7C632 /* Pods_ERJustifiedFlowLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA6EB5C78E030581DBD0D43 /* Pods_ERJustifiedFlowLayout_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -37,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		317C2C895B063655AF11A3E1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		56FFB04B1B309EB200B41734 /* ERViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ERViewController.xib; sourceTree = "<group>"; };
+		56FFB04D1B309FF000B41734 /* ERCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERCollectionViewCell.h; sourceTree = "<group>"; };
+		56FFB04E1B309FF000B41734 /* ERCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERCollectionViewCell.m; sourceTree = "<group>"; };
+		56FFB04F1B309FF000B41734 /* ERCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ERCollectionViewCell.xib; sourceTree = "<group>"; };
 		594CF7697F98E6D301927807 /* Pods-ERJustifiedFlowLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERJustifiedFlowLayout_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERJustifiedFlowLayout_Tests/Pods-ERJustifiedFlowLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ERJustifiedFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ERJustifiedFlowLayout.app; path = ERJustifiedFlowLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,7 +65,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6AA6EB5C78E030581DBD0D43 /* Pods_ERJustifiedFlowLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERJustifiedFlowLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A21BA28A861805F416E9BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3C7D0E0D8FC13C012D59B2D /* Pods_ERJustifiedFlowLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERJustifiedFlowLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE20CED1BD4A46C8134E5F50 /* Pods-ERJustifiedFlowLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERJustifiedFlowLayout_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERJustifiedFlowLayout_Example/Pods-ERJustifiedFlowLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CBE7976600189DFDCAE54EDB /* Pods-ERJustifiedFlowLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERJustifiedFlowLayout_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ERJustifiedFlowLayout_Example/Pods-ERJustifiedFlowLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,9 +137,12 @@
 			children = (
 				6003F59C195388D20070C39A /* ERAppDelegate.h */,
 				6003F59D195388D20070C39A /* ERAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ERViewController.h */,
 				6003F5A6195388D20070C39A /* ERViewController.m */,
+				56FFB04B1B309EB200B41734 /* ERViewController.xib */,
+				56FFB04D1B309FF000B41734 /* ERCollectionViewCell.h */,
+				56FFB04E1B309FF000B41734 /* ERCollectionViewCell.m */,
+				56FFB04F1B309FF000B41734 /* ERCollectionViewCell.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -276,9 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				56FFB04C1B309EB200B41734 /* ERViewController.xib in Resources */,
+				56FFB0511B309FF000B41734 /* ERCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +402,7 @@
 				6003F59E195388D20070C39A /* ERAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ERViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				56FFB0501B309FF000B41734 /* ERCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
