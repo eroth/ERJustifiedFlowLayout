@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) ERCollectionViewCell *sizingCell;
 @property (nonatomic, strong) NSArray *dataSourceArray;
-@property (weak, nonatomic) IBOutlet ERJustifiedFlowLayout *customJustfiedFlowLayout;
+@property (weak, nonatomic) IBOutlet ERJustifiedFlowLayout *customJustifiedFlowLayout;
 
 @end
 
@@ -37,9 +37,9 @@
 	// ERJustifiedFlowLayout customization point-- set horizontal justification type and cell padding here.
 	// Vertical justification is not yet supported. It is not necessary to set the sectionInset property.
 	
-	self.customJustfiedFlowLayout.horizontalJustification = FlowLayoutHorizontalJustificationRight;
-	self.customJustfiedFlowLayout.horizontalCellPadding = 5;
-	self.customJustfiedFlowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 0, 20);
+	self.customJustifiedFlowLayout.horizontalJustification = FlowLayoutHorizontalJustificationRight;
+	self.customJustifiedFlowLayout.horizontalCellPadding = 5;
+	self.customJustifiedFlowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 0, 20);
 	
 }
 
