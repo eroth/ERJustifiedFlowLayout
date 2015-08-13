@@ -33,7 +33,7 @@
 			}
 			else {
 				CGRect newLeftAlignedFrame = attributes.frame;
-				newLeftAlignedFrame.origin.x = leftMargin;
+				newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
 				attributes.frame = newLeftAlignedFrame;
 			}
 
@@ -108,7 +108,7 @@
 	}
 }
 -(void)setVerticalJustification:(FlowLayoutVerticalJustification)verticalJustification {
-	NSAssert(NO, @"Sorry, vertical justifcation hasn't been implemented yet.");
+	NSAssert(NO, @"Sorry, vertical justification hasn't been implemented yet.");
 }
 
 @end
