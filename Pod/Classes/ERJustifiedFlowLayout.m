@@ -82,6 +82,11 @@
 					UICollectionViewLayoutAttributes *prevAttribute = attributesForElementsInRect[i];
 					newRightAlignedFrame = prevAttribute.frame;
 					newRightAlignedFrame.origin.x = rightMargin - prevAttribute.bounds.size.width - self.horizontalCellPadding;
+
+                    if (newRightAlignedFrame.origin.x < 0) {
+                        newRightAlignedFrame.origin.x = CGRectGetWidth(rect) - self.sectionInset.right - CGRectGetWidth(prevAttribute.frame);
+                    }
+
 					prevAttribute.frame = newRightAlignedFrame;
 					rightMargin = newRightAlignedFrame.origin.x;
 					[newAttributesForElementsInRect replaceObjectAtIndex:i withObject:prevAttribute];
