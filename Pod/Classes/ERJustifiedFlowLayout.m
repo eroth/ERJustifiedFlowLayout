@@ -27,29 +27,44 @@
 		CGFloat leftMargin = 0.0;
 		
 		// Assumes attributes are in order by index path
-		for (UICollectionViewLayoutAttributes *attributes in attributesForElementsInRect) {
-			if (attributes.frame.origin.x == self.sectionInset.left) {
-				leftMargin = self.sectionInset.left;
-			}
-			else {
-				CGRect newLeftAlignedFrame = attributes.frame;
-				newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
-				attributes.frame = newLeftAlignedFrame;
+        for (NSUInteger idx = 0; idx < attributesForElementsInRect.count; idx++) {
+            UICollectionViewLayoutAttributes *attributes = attributesForElementsInRect[idx];
+            if (attributes.frame.origin.x == self.sectionInset.left) {
+                leftMargin = self.sectionInset.left;
+            }
+            else {
+                CGRect newLeftAlignedFrame = attributes.frame;
+                newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
+                attributes.frame = newLeftAlignedFrame;
                 if ([attributes isEqual:[attributesForElementsInRect firstObject]]) {
                     leftMargin = self.sectionInset.left;
                 }
-			}
+            }
 
             if (leftMargin + attributes.frame.size.width + self.horizontalCellPadding > CGRectGetWidth(rect)) {
                 CGRect newLeftAlignedFrame = attributes.frame;
                 newLeftAlignedFrame.origin.x = self.sectionInset.left;
                 attributes.frame = newLeftAlignedFrame;
+                leftMargin = self.sectionInset.left;
+            } else {
+                if (idx > 0) {
+                    UICollectionViewLayoutAttributes *prevAttributes = attributesForElementsInRect[idx - 1];
+                    if (attributes.frame.origin.y > prevAttributes.frame.origin.y) {
+                        CGFloat topDiff = attributes.frame.origin.y - prevAttributes.frame.origin.y;
+                        for (NSUInteger idx2 = idx; idx2 < attributesForElementsInRect.count; idx2++) {
+                            UICollectionViewLayoutAttributes *attributes2 = attributesForElementsInRect[idx2];
+                            CGRect newLeftAlignedFrame = attributes2.frame;
+                            newLeftAlignedFrame.origin.y -= topDiff;
+                            attributes2.frame = newLeftAlignedFrame;
+                        }
+                    }
+                }
             }
+
+            leftMargin += attributes.frame.size.width + self.horizontalCellPadding;
             
-			leftMargin += attributes.frame.size.width + self.horizontalCellPadding;
-			
-			[newAttributesForElementsInRect addObject:attributes];
-		}
+            [newAttributesForElementsInRect addObject:attributes];
+        }
 		
 		return newAttributesForElementsInRect;
 	}
