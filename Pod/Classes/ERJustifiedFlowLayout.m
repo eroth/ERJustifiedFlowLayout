@@ -35,6 +35,9 @@
 				CGRect newLeftAlignedFrame = attributes.frame;
 				newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
 				attributes.frame = newLeftAlignedFrame;
+                if ([attributes isEqual:[attributesForElementsInRect firstObject]]) {
+                    leftMargin = self.sectionInset.left;
+                }
 			}
 
             if (leftMargin + attributes.frame.size.width + self.horizontalCellPadding > CGRectGetWidth(rect)) {
