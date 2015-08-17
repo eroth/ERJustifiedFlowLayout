@@ -44,6 +44,20 @@
                 CGRect newLeftAlignedFrame = attributes.frame;
                 newLeftAlignedFrame.origin.x = self.sectionInset.left;
                 attributes.frame = newLeftAlignedFrame;
+                leftMargin = self.sectionInset.left;
+            } else {
+                if (idx > 0) {
+                    UICollectionViewLayoutAttributes *prevAttributes = attributesForElementsInRect[idx - 1];
+                    if (attributes.frame.origin.y > prevAttributes.frame.origin.y) {
+                        CGFloat topDiff = attributes.frame.origin.y - prevAttributes.frame.origin.y;
+                        for (NSUInteger idx2 = idx; idx2 < attributesForElementsInRect.count; idx2++) {
+                            UICollectionViewLayoutAttributes *attributes2 = attributesForElementsInRect[idx2];
+                            CGRect newLeftAlignedFrame = attributes2.frame;
+                            newLeftAlignedFrame.origin.y -= topDiff;
+                            attributes2.frame = newLeftAlignedFrame;
+                        }
+                    }
+                }
             }
             
 			leftMargin += attributes.frame.size.width + self.horizontalCellPadding;
