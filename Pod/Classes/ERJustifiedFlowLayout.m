@@ -27,18 +27,19 @@
 		CGFloat leftMargin = 0.0;
 		
 		// Assumes attributes are in order by index path
-		for (UICollectionViewLayoutAttributes *attributes in attributesForElementsInRect) {
-			if (attributes.frame.origin.x == self.sectionInset.left) {
-				leftMargin = self.sectionInset.left;
-			}
-			else {
-				CGRect newLeftAlignedFrame = attributes.frame;
-				newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
-				attributes.frame = newLeftAlignedFrame;
+        for (NSUInteger idx = 0; idx < attributesForElementsInRect.count; idx++) {
+            UICollectionViewLayoutAttributes *attributes = attributesForElementsInRect[idx];
+            if (attributes.frame.origin.x == self.sectionInset.left) {
+                leftMargin = self.sectionInset.left;
+            }
+            else {
+                CGRect newLeftAlignedFrame = attributes.frame;
+                newLeftAlignedFrame.origin.x = ([attributes isEqual:[attributesForElementsInRect firstObject]]) ? self.sectionInset.left : leftMargin;
+                attributes.frame = newLeftAlignedFrame;
                 if ([attributes isEqual:[attributesForElementsInRect firstObject]]) {
                     leftMargin = self.sectionInset.left;
                 }
-			}
+            }
 
             if (leftMargin + attributes.frame.size.width + self.horizontalCellPadding > CGRectGetWidth(rect)) {
                 CGRect newLeftAlignedFrame = attributes.frame;
@@ -59,11 +60,11 @@
                     }
                 }
             }
+
+            leftMargin += attributes.frame.size.width + self.horizontalCellPadding;
             
-			leftMargin += attributes.frame.size.width + self.horizontalCellPadding;
-			
-			[newAttributesForElementsInRect addObject:attributes];
-		}
+            [newAttributesForElementsInRect addObject:attributes];
+        }
 		
 		return newAttributesForElementsInRect;
 	}
