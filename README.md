@@ -69,11 +69,12 @@ Once instantiated or referenced, `ERJustifiedFlowLayout` requires only the setti
 </p>
 
 ## Versions
-1.0: Initial version
-1.1: Fixes issues [#2](../../issues/2), [#4](../../issues/4), and [#9](../../issues/9) (thanks a lot, [Sega-Zero](https://github.com/Sega-Zero)!!!)
+**1.0**:<br>Initial version release<br>
+**1.1**:<br>Fixes issues [#2](../../issues/2), [#4](../../issues/4), and [#9](../../issues/9) (thanks a lot, [Sega-Zero](https://github.com/Sega-Zero)!!!)
 
 ## Improvements
-Ability to vertically align cells (top, middle, bottom) is coming soon, as is the ability to horizontally center justify cells.
+* Ability to vertically align cells (top, middle, bottom) is coming soon, as is the ability to horizontally center justify cells.
+* Currently not supporting horizontal scrolling: `UICollectionViewScrollDirectionHorizontal`
 
 ## Author
 
