@@ -39,8 +39,7 @@
 	
 	self.customJustifiedFlowLayout.horizontalJustification = FlowLayoutHorizontalJustificationRight;
 	self.customJustifiedFlowLayout.horizontalCellPadding = 5;
-	self.customJustifiedFlowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 0, 20);
-	
+	self.customJustifiedFlowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 0, 20);	
 }
 
 -(void)configureCell:(ERCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {

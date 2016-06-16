@@ -36,14 +36,15 @@
 	if (self.horizontalJustification == FlowLayoutHorizontalJustificationLeft) {
         CGSize oldSize = [super collectionViewContentSize];
 		NSArray *attributesForElementsInRect = [super layoutAttributesForElementsInRect:CGRectMake(0, 0, oldSize.width, oldSize.height)];
+		NSMutableArray *attrsCopy = [self attributesDeepCopyForOriginalAttributes:attributesForElementsInRect];
 		NSMutableArray *newAttributesForElementsInRect = [[NSMutableArray alloc] initWithCapacity:attributesForElementsInRect.count];
 		
 		CGFloat leftMargin = self.sectionInset.left;
         CGFloat topMargin = self.sectionInset.top;
 		
 		// Assumes attributes are in order by index path
-        for (NSUInteger idx = 0; idx < attributesForElementsInRect.count; idx++) {
-            UICollectionViewLayoutAttributes *attributes = attributesForElementsInRect[idx];
+        for (NSUInteger idx = 0; idx < attrsCopy.count; idx++) {
+            UICollectionViewLayoutAttributes *attributes = attrsCopy[idx];
 
             CGRect newLeftAlignedFrame = attributes.frame;
             newLeftAlignedFrame.origin.x = leftMargin;
@@ -73,7 +74,10 @@
 	
 	if (self.horizontalJustification == FlowLayoutHorizontalJustificationRight) {
 		NSArray *attributesForElementsInRect = [super layoutAttributesForElementsInRect:rect];
-		NSMutableArray *newAttributesForElementsInRect = [[NSMutableArray alloc] initWithCapacity:attributesForElementsInRect.count];
+		
+		// Deep copy attributes to avoid debugger error
+		NSMutableArray *attrsCopy = [self attributesDeepCopyForOriginalAttributes:attributesForElementsInRect];
+		NSMutableArray *newAttributesForElementsInRect = [[NSMutableArray alloc] initWithCapacity:attrsCopy.count];
 		
 		CGFloat rightMargin = 0.0;
 		int startingRowIndex = 0;
@@ -81,13 +85,13 @@
 		int idx = 0;
 		
 		// Assumes attributes are in order by index path
-		for (UICollectionViewLayoutAttributes *anAttribute in attributesForElementsInRect) {
+		for (UICollectionViewLayoutAttributes *anAttribute in attrsCopy) {
 			[newAttributesForElementsInRect addObject:anAttribute];
 			
 			// Pull out the last cell on each line, indicated by its x-origin and width adding up to the size of the collectionView minus
 			// the right sectionInset.  On the last line of the collection view, the right-most cell may not be initially placed at the
 			// far right-hand side, so we check if it's the last element in the array in that case
-			if (anAttribute.frame.origin.x + anAttribute.frame.size.width == rect.size.width - self.sectionInset.right || [attributesForElementsInRect indexOfObjectIdenticalTo:anAttribute] == attributesForElementsInRect.count-1) {
+			if (anAttribute.frame.origin.x + anAttribute.frame.size.width == rect.size.width - self.sectionInset.right || [attrsCopy indexOfObjectIdenticalTo:anAttribute] == attrsCopy.count-1) {
 				rightMargin = rect.size.width - anAttribute.bounds.size.width - self.sectionInset.right;
 				CGRect newRightAlignedFrame = anAttribute.frame;
 				newRightAlignedFrame.origin.x = rightMargin;
@@ -96,7 +100,7 @@
 				
 				// Iterate back to the first cell in that row from the current position and readjust x-origin based on the last cell's position
 				for (int i = endingRowIndex-1; i >= startingRowIndex; i--) {
-					UICollectionViewLayoutAttributes *prevAttribute = attributesForElementsInRect[i];
+					UICollectionViewLayoutAttributes *prevAttribute = attrsCopy[i];
 					newRightAlignedFrame = prevAttribute.frame;
 					newRightAlignedFrame.origin.x = rightMargin - prevAttribute.bounds.size.width - self.horizontalCellPadding;
 
@@ -129,8 +133,19 @@
 		_horizontalJustification = horizontalJustification;
 	}
 }
+
 -(void)setVerticalJustification:(FlowLayoutVerticalJustification)verticalJustification {
 	NSAssert(NO, @"Sorry, vertical justification hasn't been implemented yet.");
+}
+
+- (NSMutableArray *)attributesDeepCopyForOriginalAttributes:(NSArray *)originalAttributes {
+	NSMutableArray *returnArray = [NSMutableArray arrayWithCapacity:originalAttributes.count];
+	
+	for (UICollectionViewLayoutAttributes *originalAttribute in originalAttributes) {
+		[returnArray addObject:[originalAttribute copy]];
+	}
+	
+	return returnArray;
 }
 
 @end
