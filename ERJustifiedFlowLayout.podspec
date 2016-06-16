@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ERJustifiedFlowLayout"
-  s.version          = "1.0"
+  s.version          = "1.1"
   s.summary          = "A subclass of UICollectionViewFlowLayout for iOS."
   s.description      = <<-DESC
                         Supports horizontal cell justification (left, full, right) and absolute inter-cell spacing."
@@ -18,8 +18,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ERJustifiedFlowLayout' => ['Pod/Assets/*.png']
-  }
   s.frameworks = 'UIKit'
 end
