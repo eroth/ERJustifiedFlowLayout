@@ -68,6 +68,10 @@ Once instantiated or referenced, `ERJustifiedFlowLayout` requires only the setti
   <br> FlowLayoutHorizontalJustificationRight, right section inset = 20, horizontalCellPadding = 5
 </p>
 
+## Versions
+1.0: Initial version
+1.1: Fixes issues [#2](../../issues/2), [#4](../../issues/4), and [#9](../../issues/9) (thanks a lot, [Sega-Zero](https://github.com/Sega-Zero)!!!)
+
 ## Improvements
 Ability to vertically align cells (top, middle, bottom) is coming soon, as is the ability to horizontally center justify cells.
 
